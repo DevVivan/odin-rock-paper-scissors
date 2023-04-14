@@ -24,9 +24,6 @@
         // Function to play a single round of the game
 
         function playRound (playerSelection, computerSelection) {
-
-        
-
             playerSelection = playerSelection.toLowerCase();
 
             console.log("You chose " + playerSelection + " and the computer chose " + computerSelection + ".");
@@ -68,19 +65,25 @@
             } 
         }
 
-        const playerSelection = prompt("What do you choose? Rock, paper or scissors?");
+        function getPlayerChoice () {
+            playerSelection = prompt("What do you choose? Rock, paper or scissors?");
+            return playerSelection;
+        }
+        
         const computerSelection = getComputerChoice();
 
         function game() {
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
+            playRound(getPlayerChoice(), getComputerChoice());
+            playRound(getPlayerChoice(), getComputerChoice());
+            playRound(getPlayerChoice(), getComputerChoice());
+            playRound(getPlayerChoice(), getComputerChoice());
+            playRound(getPlayerChoice(), getComputerChoice());
 
-
-            console.log("Your score is " + playerScore);
-            console.log("The computers score is " + computerScore);
+            if (playerScore > computerScore) {
+                console.log("Your score is " + playerScore + " and the computers score is " + computerScore + ". Therefore, You Win! Great Job!")
+            } else {
+                console.log("Your score is " + playerScore + " and the computers score is " + computerScore + ". Therefore, You Lose!")
+            }
         }   
 
         game();
