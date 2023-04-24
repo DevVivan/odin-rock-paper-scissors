@@ -1,92 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
+    <header>
+        <div class="blink-style">
+            <a href="index.html"><h1 class="title">Rock   Paper   Scissors</h1></a>
+        </div>
+    </header>
 
-        let playerScore = 0;
-        let computerScore = 0;
+    <div class="main-game">
 
-        // Function to choose a random option from "Rock", "Paper" and "Scissors"
+        <div class="score-cards">
+            <div class="user-card">
+                <div class="user-score-card">
+                    <h2 class="score-card">You: <span class="user-score">0</span></h2>
+                </div>
+                <div class="display-image">
+                    <img id="userChoiceImage" class="user-score-display score-display" src="images/rock.png" alt="">
+                </div>
+            </div>
+            <div class="computer-card">
+                <div class="computer-score-card">
+                    <h2 class="score-card">Computer: <span class="computer-score">0</span></h2>
+                </div>
+                <div class="display-image">
+                    <img id="computerChoiceImage" class="computer-score-display score-display" src="images/rock.png" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="select-choice-text-panel">
+            <div class="select-text">
+                <h2 class="select-your-choice">SELECT YOUR CHOICE:</h2>
+            </div>
+        </div>
+        <br>
+        <div class="choice-buttons">
+            <button id="rockButton" class="rock choice-button">Rock</button>
+            <button id="paperButton" class="paper choice-button">Paper</button>
+            <button id="scissorsButton" class="scissors choice-button">Scissors</button>
+        </div>
+    </div>
 
-        function getComputerChoice () {
-            const options = ["rock", "paper", "scissors"];
-
-            let randomOption = options[Math.floor(Math.random()*options.length)];
-            return (randomOption);
-        }
-
-        // Function to play a single round of the game
-
-        function playRound (playerSelection, computerSelection) {
-            playerSelection = playerSelection.toLowerCase();
-
-            console.log("You chose " + playerSelection + " and the computer chose " + computerSelection + ".");
-            
-            // if player chooses rock
-            
-            if (playerSelection == "rock" && computerSelection == "scissors") {
-                console.log("You Win! Rock beats Scissors");
-                playerScore += 1;
-            } else if (playerSelection == "rock" && computerSelection == "paper") {
-                console.log("You Lose! Paper beats Rock");
-                computerScore += 1;
-            } else if (playerSelection == "rock" && computerSelection == "rock") {
-                console.log("It's a tie! You both chose Rock");
-            } 
-
-            // if player chooses paper 
-
-            if (playerSelection == "paper" && computerSelection == "scissors") {
-                console.log("You Lose! Scissors beats Paper");
-                computerScore += 1;
-            } else if (playerSelection == "paper" && computerSelection == "paper") {
-                console.log("It's a tie! You both chose Paper");
-            } else if (playerSelection == "paper" && computerSelection == "rock") {
-                console.log("You Win! Paper beats Rock");
-                playerScore += 1;
-            } 
-            
-            // if player chooses scissors 
-
-            if (playerSelection == "scissors" && computerSelection == "scissors") {
-                console.log("It's a tie! You both chose Scissors");
-            } else if (playerSelection == "scissors" && computerSelection == "paper") {
-                console.log("You Win! Scissors beats Paper");
-                playerScore += 1;
-            } else if (playerSelection == "scissors" && computerSelection == "rock") {
-                console.log("You Lose! Rock beats Scissors");
-                computerScore += 1;
-            } 
-        }
-
-        function getPlayerChoice () {
-            playerSelection = prompt("What do you choose? Rock, paper or scissors?");
-            return playerSelection;
-        }
-        
-        const computerSelection = getComputerChoice();
-
-        function game() {
-            playRound(getPlayerChoice(), getComputerChoice());
-            playRound(getPlayerChoice(), getComputerChoice());
-            playRound(getPlayerChoice(), getComputerChoice());
-            playRound(getPlayerChoice(), getComputerChoice());
-            playRound(getPlayerChoice(), getComputerChoice());
-
-            if (playerScore > computerScore) {
-                console.log("Your score is " + playerScore + " and the computers score is " + computerScore + ". Therefore, You Win! Great Job!")
-            } else {
-                console.log("Your score is " + playerScore + " and the computers score is " + computerScore + ". Therefore, You Lose!")
-            }
-        }   
-
-        game();
-    </script>
+    <!-- The overlay -->
+    <div class="overlay"></div>
 </body>
 </html>

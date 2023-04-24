@@ -1,0 +1,245 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 10;
+  }
+  
+  header {
+      background-color: #595959;
+      font-family: 'ArcadeClassic', sans-serif;
+      height: 150px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-shadow: 4px 4px black;
+      width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .title {
+    color: white;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .score-display {
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: bounce 0.7s ease-in-out infinite;
+  }
+  
+  .score-card {
+    font-family: 'ArcadeClassic', sans-serif;
+    text-shadow: 2px 2px black;
+    font-size: 40px;
+    color: white;
+    padding: 2px 20px;
+    background-color: #A9A9A9;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  .user-score-card {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .score-cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    align-items: center;
+  }
+  
+  .main-game {
+    background-color: lightgray;
+    height: 900px;
+    width: 100%;
+  }
+  
+  button:hover {
+    transform: scale(1.1) perspective(1px)
+  }
+  
+  button {
+    transition: all .1s ease-in-out;
+  }
+  
+  .score-card {
+    filter: drop-shadow(3px 3px 2px black);
+  }
+  
+  .score-display {
+    filter: drop-shadow(6px 6px 0 #A9A9A9);
+    width: 100%;
+  }
+  
+  .select-your-choice {
+    font-family: 'ArcadeClassic', sans-serif;
+    text-shadow: 2px 2px black;
+    font-size: 40px;
+    color: white;
+    background-color: #A9A9A9;
+  }
+  
+  .select-choice-text-panel {
+    font-family: 'ArcadeClassic', sans-serif;
+    text-shadow: 2px 2px black;
+    font-size: 40px;
+    color: white;
+    padding: 2px 20px;
+    background-color: #A9A9A9;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .choice-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+  }
+  
+  .choice-button {
+    font-family: 'ArcadeClassic', sans-serif;
+    text-shadow: 2px 2px black;
+    font-size: 35px;
+    color: white;
+    padding: 2px 20px;
+    background-color: #A9A9A9;
+    border-radius: 5px;
+    align-items: center;  
+    border: 2px solid #595959;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    header {
+      font-size: 15px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .score-card {
+      font-size: 25px;
+    }
+  
+    .score-cards {
+      width: 100%;
+    }
+  
+    .select-your-choice {
+      font-size: 20px;
+    }
+    
+    #userChoiceImage {
+      width: 90%;
+      height: auto;
+    }
+  
+    #computerChoiceImage {
+      width: 90%;
+      height: auto;
+    }
+  
+  }
+  
+  
+  
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+  
+  /* Remove default margin */
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  } 
+  
+  /* Set core body defaults */
+  body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
