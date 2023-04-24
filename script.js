@@ -53,8 +53,14 @@ window.onload = function() {
 
             // delay using overlay 
             showOverlay();
-            await delay(5000);
+            await delay(2000);
             hideOverlay();
+
+            // bring back rock images after delay
+            document.getElementById("userChoiceImage").src = "images/rock.png";
+            document.getElementById("computerChoiceImage").src = "images/rock.png";
+
+            // to start bouncing animation on userChoiceImage
         })
 
         paperClick.addEventListener('click', async () => {
@@ -72,8 +78,12 @@ window.onload = function() {
 
             // delay using overlay 
             showOverlay();
-            await delay(5000);
+            await delay(2000);
             hideOverlay();
+
+            // bring back rock images after delay
+            document.getElementById("userChoiceImage").src = "images/rock.png";
+            document.getElementById("computerChoiceImage").src = "images/rock.png";
         })
 
         scissorsClick.addEventListener('click', async () => {
@@ -90,8 +100,14 @@ window.onload = function() {
 
             // delay using overlay 
             showOverlay();
-            await delay(5000);
+            await delay(2000);
             hideOverlay();
+
+            // bring back rock images after delay
+            document.getElementById("userChoiceImage").src = "images/rock.png";
+            document.getElementById("computerChoiceImage").src = "images/rock.png";
+
+        
         })
     }
     userSelection = getPlayerChoice();
