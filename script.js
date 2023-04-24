@@ -5,6 +5,7 @@ let userScoreValue = document.querySelector(".user-score");
 let computerScoreValue = document.querySelector(".computer-score");
 let userScoreValueChanging;
 let computerScoreValueChanging;
+let displayImages = document.getElementsByClassName("score-display");
 
 const overlay = document.querySelector(".overlay");
 
@@ -60,7 +61,9 @@ window.onload = function() {
             document.getElementById("userChoiceImage").src = "images/rock.png";
             document.getElementById("computerChoiceImage").src = "images/rock.png";
 
-            // to start bouncing animation on userChoiceImage
+            // to restart bouncing animation after delay
+            userChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
+            computerChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
         })
 
         paperClick.addEventListener('click', async () => {
@@ -84,6 +87,10 @@ window.onload = function() {
             // bring back rock images after delay
             document.getElementById("userChoiceImage").src = "images/rock.png";
             document.getElementById("computerChoiceImage").src = "images/rock.png";
+
+            // to restart bouncing animation after delay
+            userChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
+            computerChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
         })
 
         scissorsClick.addEventListener('click', async () => {
@@ -107,7 +114,9 @@ window.onload = function() {
             document.getElementById("userChoiceImage").src = "images/rock.png";
             document.getElementById("computerChoiceImage").src = "images/rock.png";
 
-        
+            // to restart bouncing animation after delay
+            userChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
+            computerChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
         })
     }
     userSelection = getPlayerChoice();
