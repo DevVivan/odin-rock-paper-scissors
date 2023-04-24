@@ -1,8 +1,8 @@
 let userSelection;
 let userScore = 0;
 let computerScore = 0;
-let userScoreValue = document.querySelector(".user-score");
-let computerScoreValue = document.querySelector(".computer-score");
+let userScoreHTML = document.querySelector(".user-score");
+let computerScoreHTML = document.querySelector(".computer-score");
 let userScoreValueChanging;
 let computerScoreValueChanging;
 let displayImages = document.getElementsByClassName("score-display");
@@ -64,6 +64,7 @@ window.onload = function() {
             // to restart bouncing animation after delay
             userChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
             computerChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
+
         })
 
         paperClick.addEventListener('click', async () => {
@@ -91,6 +92,7 @@ window.onload = function() {
             // to restart bouncing animation after delay
             userChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
             computerChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
+
         })
 
         scissorsClick.addEventListener('click', async () => {
@@ -117,6 +119,7 @@ window.onload = function() {
             // to restart bouncing animation after delay
             userChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
             computerChoiceImage.setAttribute('style', 'animation: bounce 0.7s ease-in-out infinite;');
+
         })
     }
     userSelection = getPlayerChoice();
