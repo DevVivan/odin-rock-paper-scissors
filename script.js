@@ -178,6 +178,10 @@ window.onload = function() {
             computerScore += 1;
             computerScoreHTML.innerHTML = computerScore;
         }
+
+        if (userScore == 5 || computerScore == 5) {
+            location.reload();
+        }
     }
 };
 
