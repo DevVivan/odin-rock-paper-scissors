@@ -11,6 +11,6 @@ In this rock paper scissors game, I applied my acquired JavaScript knowledge to 
 
 ## Images
 
-<img src="screenshots/gif-1.gif" height="50%" width="50%">
+<img src="screenshots/gif-1.gif" height="100%" width="100%">
 
 
