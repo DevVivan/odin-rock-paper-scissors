@@ -11,6 +11,8 @@ In this rock paper scissors game, I applied my acquired JavaScript knowledge to 
 
 ## What did this project teach me?
 
+- Javascript DOM Manipulation
+  - Event Listeners & Event Handlers
 
 
 ## Images
