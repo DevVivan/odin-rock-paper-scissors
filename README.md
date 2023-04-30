@@ -13,6 +13,7 @@ In this rock paper scissors game, I applied my acquired JavaScript knowledge to 
 
 - Javascript DOM Manipulation
   - Event Listeners & Event Handlers
+  - `querySelector` and `getElementById`
 
 
 ## Images
