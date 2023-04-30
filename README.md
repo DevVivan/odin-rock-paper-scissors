@@ -25,6 +25,10 @@ In this rock paper scissors game, I applied my acquired JavaScript knowledge to 
 - Basics of CSS Animations
 - CSS `:hover` selector
 
+### Other
+
+- Git branching
+
 ## Images
 
 <img src="screenshots/gif-1.gif" height="100%" width="100%">
