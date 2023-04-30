@@ -9,6 +9,10 @@ In this rock paper scissors game, I applied my acquired JavaScript knowledge to 
 - [*Live Preview*](https://devvivan.github.io/odin-rock-paper-scissors/)
 - [*My Progress*](https://github.com/DevVivan/odin-project)
 
+## What did this project teach me?
+
+
+
 ## Images
 
 <img src="screenshots/gif-1.gif" height="100%" width="100%">
