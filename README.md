@@ -11,12 +11,17 @@ In this rock paper scissors game, I applied my acquired JavaScript knowledge to 
 
 ## What did this project teach me?
 
+### JavaScript 
+
 - JavaScript DOM Manipulation
   - Event Listeners & Event Handlers
   - `querySelector` & `getElementById`
 - JavaScript Array Method: `length` property
 - JavaScript Functions
 - JavaScript Conditionals
+
+### CSS
+
 - Basics of CSS Animations
 - CSS `:hover` selector
 
